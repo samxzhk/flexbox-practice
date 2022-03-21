@@ -1,0 +1,82 @@
+/*CSS reset start*/
+
+html
+{
+  box-sizing: border-box;  
+}
+*, *::after, *::before
+{
+  box-sizing:inherit;
+  padding:0;
+  margin:0;
+}
+
+/*CSS reset end*/
+
+body
+{
+  background-color: black;
+  padding-inline:8vw;
+}
+
+#wrapper
+{
+  max-width: 1000px;
+  margin-block:10vw;
+  margin-inline: auto;
+}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 50vw;
+  padding:1rem;
+}
+
+.container__img
+{
+  flex:1 1 400px;
+  overflow: hidden;
+  display: flex;
+  height:400px;
+  margin:1rem;
+}
+.container__img--big
+{
+  flex-basis: 100%;
+  object-fit: contain;
+  object-position: center;
+  
+}
+
+img:hover
+{
+  transform:scale(1.2);
+}
+
+img
+{
+  width: 100%;
+  transition: 0.7s;
+  height:100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 550px)
+{
+
+  .container__img
+  {
+    flex:1 1 auto;
+   height:200px;
+  }
+
+  .container__img--big
+  {
+    object-fit:cover; 
+    object-position: center;
+  }
+}
